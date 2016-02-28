@@ -65,4 +65,4 @@ DT <- data.table(selectedData)
 calculatedData <- DT[, lapply(.SD, mean), 
                                by = c("subjectsId", "activity")]
 dim(calculatedData)
-write.table(calculatedData, "calculatedTidyData.txt")
+write.table(calculatedData, "calculatedTidyData.txt", row.names = FALSE)
